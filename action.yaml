@@ -1,0 +1,17 @@
+name: "provision resource using terraform"
+#branding: to color or format
+author: "Dinesh Patil"
+description: 'It will apply your terraform job'
+inputs:
+  project_name:
+    description: "provide project name"
+    required: true
+  disk_name:
+    description: "provide disk name"
+    required: true
+runs:
+  using: docker
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.project_name }}
+    - ${{ inputs.disk_name }}
