@@ -9,6 +9,8 @@ inputs:
   disk_name:
     description: "provide disk name"
     required: true
+  google_credentials:
+    required: true
 runs:
   using: docker
   image: 'Dockerfile'
