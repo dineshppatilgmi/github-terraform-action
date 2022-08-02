@@ -5,5 +5,6 @@ RUN echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] http
 RUN apt-get update -y
 RUN apt-get install -y terraform
 COPY . /
+RUN ls -ltr
 RUN chmod +x /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
